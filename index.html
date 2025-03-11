@@ -41,8 +41,8 @@
       color: #ccc; /* Texto de parágrafo em cinza claro */
     }
 
-    /* Estilo para a tela de login */
-    .login-container {
+    /* Estilo para o painel de administração */
+    .admin-panel {
       max-width: 400px;
       margin: 50px auto;
       padding: 20px;
@@ -54,40 +54,38 @@
       transition: opacity 1s ease-in-out;
     }
 
-    .login-container.show {
+    .admin-panel.show {
       opacity: 1;
       visibility: visible;
     }
 
-    input {
-      width: 100%;
-      padding: 10px;
-      margin: 10px 0;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      background-color: #333;
-      color: white;
+    .admin-panel h2 {
+      font-size: 30px;
+      font-weight: bold; /* Texto em negrito */
+      margin-bottom: 20px;
     }
 
-    button {
+    .admin-panel button {
       width: 100%;
       padding: 12px;
-      background-color: #28a745; /* Cor verde */
+      margin: 10px 0;
+      background-color: #007bff;
       color: white;
       border: none;
-      border-radius: 20px; /* Botão mais redondo */
+      border-radius: 5px;
       cursor: pointer;
       font-size: 18px;
       transition: background-color 0.3s;
     }
 
-    button:hover {
-      background-color: #218838; /* Cor verde mais escuro ao passar o mouse */
+    .admin-panel button:hover {
+      background-color: #0056b3; /* Cor do botão ao passar o mouse */
     }
 
-    .login-container input {
-      font-size: 16px;
+    .admin-panel button:focus {
+      outline: none;
     }
+
   </style>
 </head>
 <body>
@@ -99,26 +97,28 @@
     <p>Bem-vindo ao painel de administração do Roblox Config.</p>
   </div>
 
-  <!-- Tela de Login -->
-  <div id="login-screen" class="login-container">
-    <h1>Login</h1>
-    <form action="#" method="post">
-      <input type="text" id="username" name="username" value="admin" placeholder="Username" required>
-      <input type="password" id="password" name="password" value="roblox" placeholder="Password" required>
-      <button type="submit">Login</button>
-    </form>
+  <!-- Painel de Administração -->
+  <div id="admin-panel" class="admin-panel">
+    <h2>Painel de Administração</h2>
+    <button>Ban User</button>
+    <button>Unban User</button>
+    <button>Jogo</button>
+    <button>Itens</button>
+    <button>Usuários</button>
+    <button>Mute User</button>
+    <button>HD ADMIN</button>
   </div>
 
   <script>
-    // Função para fazer a transição para a tela de login
+    // Função para fazer a transição para o painel de administração
     setTimeout(function() {
       // Esconde a tela inicial com transição
       document.getElementById("initial-screen").style.opacity = "0";
       document.getElementById("initial-screen").style.visibility = "hidden";
 
-      // Exibe a tela de login com transição suave
-      document.getElementById("login-screen").classList.add("show");
-    }, 3000); // Espera 3 segundos antes de mudar
+      // Exibe o painel de administração com transição suave
+      document.getElementById("admin-panel").classList.add("show");
+    }, 3000); // Espera 3 segundos antes de mudar para o painel
   </script>
 
 </body>
