@@ -44,7 +44,6 @@
     /* Estilo para o painel de administração */
     .admin-panel {
       max-width: 400px;
-      margin: 50px auto;
       padding: 20px;
       background-color: #1e1e1e;
       border-radius: 10px;
@@ -52,6 +51,9 @@
       opacity: 0;
       visibility: hidden;
       transition: opacity 1s ease-in-out;
+      position: absolute;
+      top: 200px; /* Posição vertical (Y) */
+      left: 775px; /* Posição horizontal (X) */
     }
 
     .admin-panel.show {
